@@ -1,26 +1,111 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4nL-dH-smi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main View Controller-->
+        <scene sceneID="qN4-gD-902">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="sK9-g2-yw9" customClass="MainViewController" customModule="Playcaller" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Mud-w3-hAd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ob3-jD-17L"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="HHh-FR-bIo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-oN-DJx">
+                                <color key="tintColor" red="0.6767131979695431" green="0.6767131979695431" blue="0.6767131979695431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zOf-Om-Yn9">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML9-0i-CSp">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="SBv-jc-gUT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="New Playsheet">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bordered" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="newPlaysheet:" destination="sK9-g2-yw9" eventType="touchUpInside" id="rEo-8P-Ibs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YZ-oQ-1we">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="t90-EY-2Nf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Playbook">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bordered" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="playbook:" destination="sK9-g2-yw9" eventType="touchUpInside" id="tUO-ws-yMG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ob3-jD-17L" firstAttribute="top" secondItem="Kk9-oN-DJx" secondAttribute="bottom" id="7Li-Ub-YmI"/>
+                            <constraint firstItem="zOf-Om-Yn9" firstAttribute="leading" secondItem="Kk9-oN-DJx" secondAttribute="leading" constant="16" id="8oU-pP-Lo5"/>
+                            <constraint firstItem="Kk9-oN-DJx" firstAttribute="leading" secondItem="HHh-FR-bIo" secondAttribute="leading" id="JcC-5B-4gz"/>
+                            <constraint firstAttribute="trailing" secondItem="Kk9-oN-DJx" secondAttribute="trailing" id="MJ4-s0-7NK"/>
+                            <constraint firstItem="zOf-Om-Yn9" firstAttribute="bottom" secondItem="Kk9-oN-DJx" secondAttribute="bottom" constant="-50" id="O3G-je-fTa"/>
+                            <constraint firstItem="Kk9-oN-DJx" firstAttribute="top" secondItem="HHh-FR-bIo" secondAttribute="top" id="RTz-5D-COJ"/>
+                            <constraint firstItem="zOf-Om-Yn9" firstAttribute="trailing" secondItem="Kk9-oN-DJx" secondAttribute="trailing" constant="-16" id="eP0-1s-vtL"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tSG-Kp-FEg"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Kk9-oN-DJx" id="SM8-Ah-50X"/>
+                        <outlet property="buttonStackView" destination="zOf-Om-Yn9" id="zMr-yt-LIl"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHx-q3-ucv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="642" y="155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kZY-xi-AFv">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="4nL-dH-smi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="X28-pL-eMd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="transparent" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sK9-g2-yw9" kind="relationship" relationship="rootViewController" id="ejR-DB-ICt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfK-dp-HOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="155.17241379310346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainBackgroundImage" width="310" height="449"/>
+    </resources>
 </document>
