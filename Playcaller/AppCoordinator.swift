@@ -6,15 +6,29 @@
 //  Copyright © 2016 Kam Dahlin. All rights reserved.
 //
 import UIKit
+import Events
+
+enum NavEvent: Event {
+    case dismiss
+    case push
+    case pop
+    // other events
+    
+    var eventData: NavEvent {
+        return self
+    }
+}
 
 class AppCoordinator: Coordinator {
     weak var parent: Coordinator?
     var children: [Coordinator] = []
     
     private (set) weak var managedController: UIViewController?
+    private var eventDistributerID: UUID?
     
     required init(with managedController: UIViewController) {
         self.managedController = managedController
+        self.eventDistributerID = EventDistributer.shared.register(handler: self)
     }
     
     func start() {
@@ -51,5 +65,25 @@ class AppCoordinator: Coordinator {
         }
         
         return true
+    }
+}
+
+extension AppCoordinator: EventHandler {
+    func handle<T: Event>(event: T) {
+        if let navEvent = event as? NavEvent {
+            self.handle(nav: navEvent)
+        }
+    }
+    
+    func handle(nav: NavEvent) {
+        switch nav.eventData {
+        case .dismiss:
+            self.managedController?.dismiss(animated: true, completion: nil)
+            break
+        case .pop:
+            break
+        case .push:
+            break
+        }
     }
 }

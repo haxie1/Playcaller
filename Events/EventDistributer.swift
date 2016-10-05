@@ -8,32 +8,32 @@
 
 import Foundation
 
-protocol Event {
+public protocol Event {
     associatedtype EventData
     var eventData: EventData { get }
 }
 
-protocol EventHandler {
+public protocol EventHandler {
     func handle<T: Event>(event: T)
 }
 
-class EventDistributer {
-    static let shared = EventDistributer()
+public class EventDistributer {
+    public static let shared = EventDistributer()
     
     private typealias EventRegistryItem = (id: UUID, item: RegistryItem)
     private var registry: [EventRegistryItem] = []
     
-    var registryCount: Int {
+    public var registryCount: Int {
         return self.registry.count
     }
     
-    @discardableResult func register<T: EventHandler>(handler: T) -> UUID where T: AnyObject {
+    @discardableResult public func register<T: EventHandler>(handler: T) -> UUID where T: AnyObject {
         let uuid = UUID()
         self.registry.append((id: uuid, item: RegistryItem(with: handler)))
         return uuid
     }
     
-    func unregister(with token: UUID) {
+    public func unregister(with token: UUID) {
         guard let index = self.registry.index(where: { $0.id == token }) else {
             return
         }
@@ -41,11 +41,11 @@ class EventDistributer {
         self.registry.remove(at: index)
     }
     
-    func unregisterAll() {
+    public func unregisterAll() {
         self.registry = []
     }
     
-    func distribute<T: Event>(event: T) {
+    public func distribute<T: Event>(event: T) {
         var staleUUIDs = [UUID]()
         
         self.registry.forEach { (eventRegItem) in

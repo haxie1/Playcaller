@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Events
 
 class TeamProfileViewController: UIViewController {
     @IBOutlet var decoration: FrostyBackgroundDecoration! {
@@ -29,11 +30,12 @@ class TeamProfileViewController: UIViewController {
     
     @IBAction func cancel(_ sender: AnyObject) {
         print("---- send cancel event")
-        //self.presentingViewController?.dismiss(animated: true, completion: nil)
+        EventDistributer.shared.distribute(event: NavEvent.dismiss)
     }
 
     @IBAction func save(_ sender: AnyObject) {
         print("---- send save event")
+        EventDistributer.shared.distribute(event: NavEvent.dismiss)
     }
     
     /*
