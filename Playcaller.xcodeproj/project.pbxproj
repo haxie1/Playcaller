@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421636221DA00C8300BB3F2C /* TeamProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */; };
+		421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */; };
+		42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42169DC21DA2C83B00FD9873 /* Coordinator.swift */; };
 		421D16FD1D9EFBFC0036E81A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D16FC1D9EFBFC0036E81A /* AppDelegate.swift */; };
 		421D17021D9EFBFC0036E81A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421D17001D9EFBFC0036E81A /* Main.storyboard */; };
 		421D17041D9EFBFC0036E81A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421D17031D9EFBFC0036E81A /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 		421D171F1D9F05E50036E81A /* UIKit-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D171E1D9F05E50036E81A /* UIKit-Extensions.swift */; };
 		421D17211D9F0AB70036E81A /* hashmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = 421D17201D9F0AB70036E81A /* hashmarks.png */; };
 		421D17251D9F39900036E81A /* Playbook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421D17241D9F39900036E81A /* Playbook.storyboard */; };
+		421D17271D9F43630036E81A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D17261D9F43630036E81A /* AppCoordinator.swift */; };
+		421D172A1D9F496D0036E81A /* TeamProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421D17291D9F496D0036E81A /* TeamProfile.storyboard */; };
+		4247CFDD1DA475D400CECC3E /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247CFDC1DA475D400CECC3E /* CoordinatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileViewController.swift; path = Features/TeamProfileViewController.swift; sourceTree = "<group>"; };
+		421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileCoordinator.swift; path = Features/TeamProfileCoordinator.swift; sourceTree = "<group>"; };
+		42169DC21DA2C83B00FD9873 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		421D16F91D9EFBFC0036E81A /* Playcaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playcaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421D16FC1D9EFBFC0036E81A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421D17011D9EFBFC0036E81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +51,9 @@
 		421D171E1D9F05E50036E81A /* UIKit-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit-Extensions.swift"; sourceTree = "<group>"; };
 		421D17201D9F0AB70036E81A /* hashmarks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hashmarks.png; sourceTree = "<group>"; };
 		421D17241D9F39900036E81A /* Playbook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Playbook.storyboard; path = Features/Playbook.storyboard; sourceTree = "<group>"; };
+		421D17261D9F43630036E81A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		421D17291D9F496D0036E81A /* TeamProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeamProfile.storyboard; sourceTree = "<group>"; };
+		4247CFDC1DA475D400CECC3E /* CoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				421D17221D9F396F0036E81A /* Features */,
+				421D17261D9F43630036E81A /* AppCoordinator.swift */,
 				421D16FC1D9EFBFC0036E81A /* AppDelegate.swift */,
 				421D171C1D9EFFA60036E81A /* MainViewController.swift */,
 				421D17001D9EFBFC0036E81A /* Main.storyboard */,
@@ -92,6 +105,7 @@
 				421D17081D9EFBFC0036E81A /* Info.plist */,
 				421D171E1D9F05E50036E81A /* UIKit-Extensions.swift */,
 				421D17201D9F0AB70036E81A /* hashmarks.png */,
+				42169DC21DA2C83B00FD9873 /* Coordinator.swift */,
 			);
 			path = Playcaller;
 			sourceTree = "<group>";
@@ -101,6 +115,7 @@
 			children = (
 				421D17111D9EFBFC0036E81A /* PlaycallerTests.swift */,
 				421D17131D9EFBFC0036E81A /* Info.plist */,
+				4247CFDC1DA475D400CECC3E /* CoordinatorTests.swift */,
 			);
 			path = PlaycallerTests;
 			sourceTree = "<group>";
@@ -108,6 +123,7 @@
 		421D17221D9F396F0036E81A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				421D17281D9F495B0036E81A /* Team Profile */,
 				421D17231D9F397D0036E81A /* Playbook */,
 			);
 			name = Features;
@@ -119,6 +135,16 @@
 				421D17241D9F39900036E81A /* Playbook.storyboard */,
 			);
 			name = Playbook;
+			sourceTree = "<group>";
+		};
+		421D17281D9F495B0036E81A /* Team Profile */ = {
+			isa = PBXGroup;
+			children = (
+				421D17291D9F496D0036E81A /* TeamProfile.storyboard */,
+				421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */,
+				421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */,
+			);
+			name = "Team Profile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421D17071D9EFBFC0036E81A /* LaunchScreen.storyboard in Resources */,
+				421D172A1D9F496D0036E81A /* TeamProfile.storyboard in Resources */,
 				421D17251D9F39900036E81A /* Playbook.storyboard in Resources */,
 				421D17041D9EFBFC0036E81A /* Assets.xcassets in Resources */,
 				421D17211D9F0AB70036E81A /* hashmarks.png in Resources */,
@@ -228,9 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421636221DA00C8300BB3F2C /* TeamProfileViewController.swift in Sources */,
+				421D17271D9F43630036E81A /* AppCoordinator.swift in Sources */,
 				421D16FD1D9EFBFC0036E81A /* AppDelegate.swift in Sources */,
+				421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */,
 				421D171D1D9EFFA60036E81A /* MainViewController.swift in Sources */,
 				421D171F1D9F05E50036E81A /* UIKit-Extensions.swift in Sources */,
+				42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4247CFDD1DA475D400CECC3E /* CoordinatorTests.swift in Sources */,
 				421D17121D9EFBFC0036E81A /* PlaycallerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +472,7 @@
 				421D17181D9EFBFC0036E81A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		421D17191D9EFBFC0036E81A /* Build configuration list for PBXNativeTarget "PlaycallerTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +481,7 @@
 				421D171B1D9EFBFC0036E81A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

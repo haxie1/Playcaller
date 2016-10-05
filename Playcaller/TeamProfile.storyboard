@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Team Profile-->
+        <scene sceneID="RSh-hL-HCZ">
+            <objects>
+                <viewController storyboardIdentifier="TeamProfileViewController" id="DbH-Jg-kVA" customClass="TeamProfileViewController" customModule="Playcaller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yyh-n2-qCV"/>
+                        <viewControllerLayoutGuide type="bottom" id="KCQ-vK-jJJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4pG-gc-Nq5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-lg-yx6">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H23-mE-sDk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H23-mE-sDk" firstAttribute="top" secondItem="yyh-n2-qCV" secondAttribute="bottom" constant="27" id="EwA-Xf-m95"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="H23-mE-sDk" secondAttribute="leading" id="JZx-tK-nnE"/>
+                            <constraint firstItem="TfH-lg-yx6" firstAttribute="top" secondItem="H23-mE-sDk" secondAttribute="bottom" constant="8" id="Rg7-e7-PdL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="TfH-lg-yx6" secondAttribute="leading" id="Y3t-W6-7Rc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TfH-lg-yx6" secondAttribute="trailing" id="ojW-uN-ENS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Team Profile" id="suC-uD-c0p">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="YR3-48-8qo">
+                            <connections>
+                                <action selector="cancel:" destination="DbH-Jg-kVA" id="ofe-uE-UV2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="viS-lz-fQt">
+                            <connections>
+                                <action selector="save:" destination="DbH-Jg-kVA" id="2Z5-oZ-m7H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="teamNameField" destination="TfH-lg-yx6" id="S4K-e5-GPh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8BQ-yd-kPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="-82.3088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zbt-ZV-sm7">
+            <objects>
+                <navigationController storyboardIdentifier="TeamProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="rnw-kD-kOS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SO5-IS-6iJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DbH-Jg-kVA" kind="relationship" relationship="rootViewController" id="ZeP-86-a1I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OM-5w-dEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="-82.3088455772114"/>
+        </scene>
+    </scenes>
+</document>

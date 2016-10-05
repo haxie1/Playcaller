@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransition(to: newCollection, with: coordinator)
+        
         coordinator.animate(alongsideTransition: { (context) in
             if newCollection.verticalSizeClass == .compact {
                 self.buttonStackView.axis = .horizontal
@@ -32,6 +33,7 @@ class MainViewController: UIViewController {
             }
             }, completion: nil)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,15 +50,7 @@ class MainViewController: UIViewController {
         // push a navigation event to the event distro
         print("--- call a navigation event for the playbook feature")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
 
