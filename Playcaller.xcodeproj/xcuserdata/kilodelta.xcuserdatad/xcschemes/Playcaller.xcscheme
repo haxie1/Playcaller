@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Playcaller.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4247CFED1DA5A4D500CECC3E"
+               BuildableName = "EventsTests.xctest"
+               BlueprintName = "EventsTests"
+               ReferencedContainer = "container:Playcaller.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -9,11 +9,16 @@
 import UIKit
 
 class TeamProfileViewController: UIViewController {
-
+    @IBOutlet var decoration: FrostyBackgroundDecoration! {
+        didSet {
+            print("set the decoration on the view")
+        }
+    }
+    
     @IBOutlet weak var teamNameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +29,7 @@ class TeamProfileViewController: UIViewController {
     
     @IBAction func cancel(_ sender: AnyObject) {
         print("---- send cancel event")
+        //self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func save(_ sender: AnyObject) {

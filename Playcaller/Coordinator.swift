@@ -15,7 +15,7 @@ protocol Coordinator: class {
     
     var currentCoordinator: Coordinator? { get }
     
-    var managedController: UIViewController { get }
+    weak var managedController: UIViewController? { get }
     init(with managedController: UIViewController)
     
     func start()

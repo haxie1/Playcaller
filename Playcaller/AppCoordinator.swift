@@ -7,29 +7,36 @@
 //
 import UIKit
 
-class AppCoordinator<ManagedController: UIViewController> {
-    let managedController: ManagedController
+class AppCoordinator: Coordinator {
+    weak var parent: Coordinator?
+    var children: [Coordinator] = []
     
-    private var hasProfile: Bool {
-        // based on model lookup
-        return true
-    }
+    private (set) weak var managedController: UIViewController?
     
-    init(withManagedController managedController: ManagedController) {
+    required init(with managedController: UIViewController) {
         self.managedController = managedController
     }
-
+    
     func start() {
-        if !self.hasProfile {
-            
+        if !self.hasProfile() {
+           DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
+                self.showTeamProfile()
+            }
         }
     }
     
     func end() {
-        // no-op for now
+    }
+
+    func showTeamProfile() {
+        let storyBoard = UIStoryboard(name: "TeamProfile", bundle: nil)
+        guard let profileController = storyBoard.instantiateInitialViewController()  else {
+            fatalError("Couldn't create the TeamProfile controller")
+        }
+        
+        self.managedController?.present(profileController, animated: true, completion: nil)
     }
     
-// Mark: - Actions
     func showPlaybook() {
         
     }
@@ -38,7 +45,11 @@ class AppCoordinator<ManagedController: UIViewController> {
         
     }
     
-    func showProfile() {
+    private func hasProfile() -> Bool {
+        guard let _ = UserDefaults.standard.string(forKey: "TeamProfileName") else {
+            return false
+        }
         
+        return true
     }
 }

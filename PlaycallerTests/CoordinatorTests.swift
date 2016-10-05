@@ -19,7 +19,7 @@ class TestCoordinator: Coordinator {
     var children: [Coordinator] = []
     var status: Status = .ready
     
-    private (set) var managedController: UIViewController
+    private (set) weak var managedController: UIViewController?
     
     required init(with managedController: UIViewController) {
         self.managedController = managedController

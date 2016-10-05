@@ -12,7 +12,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var buttonStackView: UIStackView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +21,16 @@ class MainViewController: UIViewController {
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransition(to: newCollection, with: coordinator)
         
+        let buttonStackView = self.buttonStackView
+        
         coordinator.animate(alongsideTransition: { (context) in
             if newCollection.verticalSizeClass == .compact {
-                self.buttonStackView.axis = .horizontal
-                self.buttonStackView.spacing = 16
+                buttonStackView?.axis = .horizontal
+                buttonStackView?.spacing = 16
                 
             } else {
-                self.buttonStackView.axis = .vertical
-                self.buttonStackView.spacing = 40
+                buttonStackView?.axis = .vertical
+                buttonStackView?.spacing = 40
             }
             }, completion: nil)
     }
@@ -40,7 +41,6 @@ class MainViewController: UIViewController {
     }
     
 // MARK: Actions
-    
     @IBAction func newPlaysheet(_ sender: AnyObject) {
         // push a navigation event to the event distro
         print("--- call a navigation event for a new playsheet")

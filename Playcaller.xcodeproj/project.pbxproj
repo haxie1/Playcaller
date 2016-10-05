@@ -22,6 +22,14 @@
 		421D17271D9F43630036E81A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D17261D9F43630036E81A /* AppCoordinator.swift */; };
 		421D172A1D9F496D0036E81A /* TeamProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421D17291D9F496D0036E81A /* TeamProfile.storyboard */; };
 		4247CFDD1DA475D400CECC3E /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247CFDC1DA475D400CECC3E /* CoordinatorTests.swift */; };
+		4247CFE01DA56FF100CECC3E /* FrostyBackgroundDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247CFDF1DA56FF100CECC3E /* FrostyBackgroundDecoration.swift */; };
+		4247CFEF1DA5A4D500CECC3E /* Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4247CFE61DA5A4D400CECC3E /* Events.framework */; };
+		4247CFF61DA5A4D500CECC3E /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247CFF51DA5A4D500CECC3E /* EventsTests.swift */; };
+		4247CFF81DA5A4D500CECC3E /* Events.h in Headers */ = {isa = PBXBuildFile; fileRef = 4247CFE81DA5A4D400CECC3E /* Events.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4247CFFB1DA5A4D500CECC3E /* Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4247CFE61DA5A4D400CECC3E /* Events.framework */; };
+		4247CFFC1DA5A4D500CECC3E /* Events.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4247CFE61DA5A4D400CECC3E /* Events.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4247D0051DA5A4FD00CECC3E /* EventDistributer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247D0041DA5A4FD00CECC3E /* EventDistributer.swift */; };
+		4247D0071DA5A61000CECC3E /* EventDistributerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247D0061DA5A61000CECC3E /* EventDistributerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +40,42 @@
 			remoteGlobalIDString = 421D16F81D9EFBFC0036E81A;
 			remoteInfo = Playcaller;
 		};
+		4247CFF01DA5A4D500CECC3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 421D16F11D9EFBFC0036E81A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4247CFE51DA5A4D400CECC3E;
+			remoteInfo = Events;
+		};
+		4247CFF21DA5A4D500CECC3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 421D16F11D9EFBFC0036E81A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 421D16F81D9EFBFC0036E81A;
+			remoteInfo = Playcaller;
+		};
+		4247CFF91DA5A4D500CECC3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 421D16F11D9EFBFC0036E81A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4247CFE51DA5A4D400CECC3E;
+			remoteInfo = Events;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4247D0001DA5A4D500CECC3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4247CFFC1DA5A4D500CECC3E /* Events.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileViewController.swift; path = Features/TeamProfileViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +97,15 @@
 		421D17261D9F43630036E81A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		421D17291D9F496D0036E81A /* TeamProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeamProfile.storyboard; sourceTree = "<group>"; };
 		4247CFDC1DA475D400CECC3E /* CoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		4247CFDF1DA56FF100CECC3E /* FrostyBackgroundDecoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrostyBackgroundDecoration.swift; path = Decorations/FrostyBackgroundDecoration.swift; sourceTree = "<group>"; };
+		4247CFE61DA5A4D400CECC3E /* Events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4247CFE81DA5A4D400CECC3E /* Events.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		4247CFE91DA5A4D400CECC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4247CFEE1DA5A4D500CECC3E /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4247CFF51DA5A4D500CECC3E /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
+		4247CFF71DA5A4D500CECC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4247D0041DA5A4FD00CECC3E /* EventDistributer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistributer.swift; sourceTree = "<group>"; };
+		4247D0061DA5A61000CECC3E /* EventDistributerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistributerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4247CFFB1DA5A4D500CECC3E /* Events.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +121,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4247CFE21DA5A4D400CECC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4247CFEB1DA5A4D500CECC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4247CFEF1DA5A4D500CECC3E /* Events.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +147,8 @@
 			children = (
 				421D16FB1D9EFBFC0036E81A /* Playcaller */,
 				421D17101D9EFBFC0036E81A /* PlaycallerTests */,
+				4247CFE71DA5A4D400CECC3E /* Events */,
+				4247CFF41DA5A4D500CECC3E /* EventsTests */,
 				421D16FA1D9EFBFC0036E81A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +158,8 @@
 			children = (
 				421D16F91D9EFBFC0036E81A /* Playcaller.app */,
 				421D170D1D9EFBFC0036E81A /* PlaycallerTests.xctest */,
+				4247CFE61DA5A4D400CECC3E /* Events.framework */,
+				4247CFEE1DA5A4D500CECC3E /* EventsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +167,7 @@
 		421D16FB1D9EFBFC0036E81A /* Playcaller */ = {
 			isa = PBXGroup;
 			children = (
+				4247CFDE1DA56FB500CECC3E /* Decorations */,
 				421D17221D9F396F0036E81A /* Features */,
 				421D17261D9F43630036E81A /* AppCoordinator.swift */,
 				421D16FC1D9EFBFC0036E81A /* AppDelegate.swift */,
@@ -147,7 +220,46 @@
 			name = "Team Profile";
 			sourceTree = "<group>";
 		};
+		4247CFDE1DA56FB500CECC3E /* Decorations */ = {
+			isa = PBXGroup;
+			children = (
+				4247CFDF1DA56FF100CECC3E /* FrostyBackgroundDecoration.swift */,
+			);
+			name = Decorations;
+			sourceTree = "<group>";
+		};
+		4247CFE71DA5A4D400CECC3E /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				4247CFE81DA5A4D400CECC3E /* Events.h */,
+				4247CFE91DA5A4D400CECC3E /* Info.plist */,
+				4247D0041DA5A4FD00CECC3E /* EventDistributer.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		4247CFF41DA5A4D500CECC3E /* EventsTests */ = {
+			isa = PBXGroup;
+			children = (
+				4247CFF51DA5A4D500CECC3E /* EventsTests.swift */,
+				4247D0061DA5A61000CECC3E /* EventDistributerTests.swift */,
+				4247CFF71DA5A4D500CECC3E /* Info.plist */,
+			);
+			path = EventsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4247CFE31DA5A4D400CECC3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4247CFF81DA5A4D500CECC3E /* Events.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		421D16F81D9EFBFC0036E81A /* Playcaller */ = {
@@ -157,10 +269,12 @@
 				421D16F51D9EFBFC0036E81A /* Sources */,
 				421D16F61D9EFBFC0036E81A /* Frameworks */,
 				421D16F71D9EFBFC0036E81A /* Resources */,
+				4247D0001DA5A4D500CECC3E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4247CFFA1DA5A4D500CECC3E /* PBXTargetDependency */,
 			);
 			name = Playcaller;
 			productName = Playcaller;
@@ -185,6 +299,43 @@
 			productReference = 421D170D1D9EFBFC0036E81A /* PlaycallerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4247CFE51DA5A4D400CECC3E /* Events */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4247CFFD1DA5A4D500CECC3E /* Build configuration list for PBXNativeTarget "Events" */;
+			buildPhases = (
+				4247CFE11DA5A4D400CECC3E /* Sources */,
+				4247CFE21DA5A4D400CECC3E /* Frameworks */,
+				4247CFE31DA5A4D400CECC3E /* Headers */,
+				4247CFE41DA5A4D400CECC3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Events;
+			productName = Events;
+			productReference = 4247CFE61DA5A4D400CECC3E /* Events.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4247CFED1DA5A4D500CECC3E /* EventsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4247D0011DA5A4D500CECC3E /* Build configuration list for PBXNativeTarget "EventsTests" */;
+			buildPhases = (
+				4247CFEA1DA5A4D500CECC3E /* Sources */,
+				4247CFEB1DA5A4D500CECC3E /* Frameworks */,
+				4247CFEC1DA5A4D500CECC3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4247CFF11DA5A4D500CECC3E /* PBXTargetDependency */,
+				4247CFF31DA5A4D500CECC3E /* PBXTargetDependency */,
+			);
+			name = EventsTests;
+			productName = EventsTests;
+			productReference = 4247CFEE1DA5A4D500CECC3E /* EventsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +352,18 @@
 						ProvisioningStyle = Automatic;
 					};
 					421D170C1D9EFBFC0036E81A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = FKB7656F6P;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 421D16F81D9EFBFC0036E81A;
+					};
+					4247CFE51DA5A4D400CECC3E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = FKB7656F6P;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					4247CFED1DA5A4D500CECC3E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = FKB7656F6P;
 						ProvisioningStyle = Automatic;
@@ -223,6 +386,8 @@
 			targets = (
 				421D16F81D9EFBFC0036E81A /* Playcaller */,
 				421D170C1D9EFBFC0036E81A /* PlaycallerTests */,
+				4247CFE51DA5A4D400CECC3E /* Events */,
+				4247CFED1DA5A4D500CECC3E /* EventsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +413,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4247CFE41DA5A4D400CECC3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4247CFEC1DA5A4D500CECC3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,6 +438,7 @@
 				421D17271D9F43630036E81A /* AppCoordinator.swift in Sources */,
 				421D16FD1D9EFBFC0036E81A /* AppDelegate.swift in Sources */,
 				421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */,
+				4247CFE01DA56FF100CECC3E /* FrostyBackgroundDecoration.swift in Sources */,
 				421D171D1D9EFFA60036E81A /* MainViewController.swift in Sources */,
 				421D171F1D9F05E50036E81A /* UIKit-Extensions.swift in Sources */,
 				42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */,
@@ -274,6 +454,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4247CFE11DA5A4D400CECC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4247D0051DA5A4FD00CECC3E /* EventDistributer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4247CFEA1DA5A4D500CECC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4247D0071DA5A61000CECC3E /* EventDistributerTests.swift in Sources */,
+				4247CFF61DA5A4D500CECC3E /* EventsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -281,6 +478,21 @@
 			isa = PBXTargetDependency;
 			target = 421D16F81D9EFBFC0036E81A /* Playcaller */;
 			targetProxy = 421D170E1D9EFBFC0036E81A /* PBXContainerItemProxy */;
+		};
+		4247CFF11DA5A4D500CECC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4247CFE51DA5A4D400CECC3E /* Events */;
+			targetProxy = 4247CFF01DA5A4D500CECC3E /* PBXContainerItemProxy */;
+		};
+		4247CFF31DA5A4D500CECC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 421D16F81D9EFBFC0036E81A /* Playcaller */;
+			targetProxy = 4247CFF21DA5A4D500CECC3E /* PBXContainerItemProxy */;
+		};
+		4247CFFA1DA5A4D500CECC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4247CFE51DA5A4D400CECC3E /* Events */;
+			targetProxy = 4247CFF91DA5A4D500CECC3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,6 +612,7 @@
 		421D17171D9EFBFC0036E81A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FKB7656F6P;
 				INFOPLIST_FILE = Playcaller/Info.plist;
@@ -413,6 +626,7 @@
 		421D17181D9EFBFC0036E81A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FKB7656F6P;
 				INFOPLIST_FILE = Playcaller/Info.plist;
@@ -453,6 +667,81 @@
 			};
 			name = Release;
 		};
+		4247CFFE1DA5A4D500CECC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FKB7656F6P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Events/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamdahlin.Events;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4247CFFF1DA5A4D500CECC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FKB7656F6P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Events/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamdahlin.Events;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4247D0021DA5A4D500CECC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = FKB7656F6P;
+				INFOPLIST_FILE = EventsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamdahlin.EventsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Playcaller.app/Playcaller";
+			};
+			name = Debug;
+		};
+		4247D0031DA5A4D500CECC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = FKB7656F6P;
+				INFOPLIST_FILE = EventsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamdahlin.EventsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Playcaller.app/Playcaller";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -482,6 +771,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4247CFFD1DA5A4D500CECC3E /* Build configuration list for PBXNativeTarget "Events" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4247CFFE1DA5A4D500CECC3E /* Debug */,
+				4247CFFF1DA5A4D500CECC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4247D0011DA5A4D500CECC3E /* Build configuration list for PBXNativeTarget "EventsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4247D0021DA5A4D500CECC3E /* Debug */,
+				4247D0031DA5A4D500CECC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

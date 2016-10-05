@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rnw-kD-kOS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Team Profile-->
+        <!--TargetVC-->
         <scene sceneID="RSh-hL-HCZ">
             <objects>
                 <viewController storyboardIdentifier="TeamProfileViewController" id="DbH-Jg-kVA" customClass="TeamProfileViewController" customModule="Playcaller" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,6 +56,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BQ-yd-kPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3Ye-vV-j3T" customClass="FrostyBackgroundDecoration" customModule="Playcaller" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="MainBackgroundImage"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="targetVC" destination="DbH-Jg-kVA" id="dAb-3J-7Pw"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="-82.3088455772114"/>
         </scene>
@@ -64,9 +72,10 @@
             <objects>
                 <navigationController storyboardIdentifier="TeamProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="rnw-kD-kOS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SO5-IS-6iJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SO5-IS-6iJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.30969548154277288" green="0.38295130076142136" blue="0.2724665543355782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -75,7 +84,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7OM-5w-dEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229.59999999999999" y="-82.3088455772114"/>
+            <point key="canvasLocation" x="70" y="-82"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainBackgroundImage" width="310" height="449"/>
+    </resources>
 </document>
