@@ -50,3 +50,7 @@ extension UINavigationBar {
         }
     }
 }
+
+extension UIViewController {
+    
+}

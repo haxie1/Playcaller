@@ -8,7 +8,35 @@
 
 import UIKit
 @IBDesignable class FrostyImageView: UIView {
+    var imageView: UIImageView = UIImageView()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.commonInit()
+    }
+    
+    func commonInit() {
+        let blur = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blur)
+        
+        self.imageView.addSubview(blurView)
+        self.imageView.alpha = 0.8
+        
+        self.addSubview(self.imageView)
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.widthAnchor.constraint(equalTo: self.imageView.widthAnchor, multiplier: 1).isActive = true
+        blurView.heightAnchor.constraint(equalTo: self.imageView.heightAnchor, multiplier: 1).isActive = true
+        
+        self.imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.imageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1).isActive = true
+        self.imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 1).isActive = true
+        
+    }
 }
 
 class FrostyBackgroundDecoration: NSObject {
@@ -18,12 +46,7 @@ class FrostyBackgroundDecoration: NSObject {
         }
     }
     
-    @IBInspectable var backgroundImage: UIImage? {
-        didSet {
-            print("----- set the image on the background image")
-        }
-    }
-    
+    @IBInspectable var backgroundImage: UIImage?
     var frostyView: FrostyImageView = FrostyImageView()
    
     override func awakeFromNib() {
@@ -41,19 +64,6 @@ class FrostyBackgroundDecoration: NSObject {
         self.frostyView.leadingAnchor.constraint(equalTo: self.targetVC.view.leadingAnchor).isActive = true
         self.frostyView.trailingAnchor.constraint(equalTo: self.targetVC.view.trailingAnchor).isActive = true
         self.frostyView.backgroundColor = UIColor.black
-        let imageView = UIImageView(image: self.backgroundImage)
-        let blur = UIBlurEffect(style: .light)
-        let blurView = UIVisualEffectView(effect: blur)
-        imageView.addSubview(blurView)
-        imageView.alpha = 0.8
-        
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-        self.frostyView.addSubview(imageView)
-        
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalTo: self.frostyView.widthAnchor, multiplier: 1).isActive = true
-        imageView.heightAnchor.constraint(equalTo: self.frostyView.heightAnchor, multiplier: 1).isActive = true
-        blurView.widthAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1).isActive = true
-        blurView.heightAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 1).isActive = true
+        self.frostyView.imageView.image = self.backgroundImage
     }
 }
