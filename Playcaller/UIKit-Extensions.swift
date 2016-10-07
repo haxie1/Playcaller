@@ -8,6 +8,7 @@
 
 import UIKit
 
+// expose controls in Interface Builder to style UIViews.
 extension UIView {
     @IBInspectable var borderColor: UIColor {
         set (color) {
@@ -37,6 +38,7 @@ extension UIView {
     }
 }
 
+// Expose a switch in Interface Builder to toggle transparent navigation bars.
 extension UINavigationBar {
     @IBInspectable var transparent: Bool {
         set (isTransparent) {
@@ -51,6 +53,3 @@ extension UINavigationBar {
     }
 }
 
-extension UIViewController {
-    
-}

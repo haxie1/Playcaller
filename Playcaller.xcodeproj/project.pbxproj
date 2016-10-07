@@ -177,8 +177,6 @@
 				421D17001D9EFBFC0036E81A /* Main.storyboard */,
 				421D17031D9EFBFC0036E81A /* Assets.xcassets */,
 				42D8CDF61DA848A30024DA7B /* Resources */,
-				421D17051D9EFBFC0036E81A /* LaunchScreen.storyboard */,
-				421D17081D9EFBFC0036E81A /* Info.plist */,
 				421D171E1D9F05E50036E81A /* UIKit-Extensions.swift */,
 				42169DC21DA2C83B00FD9873 /* Coordinator.swift */,
 			);
@@ -253,6 +251,8 @@
 		42D8CDF61DA848A30024DA7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				421D17081D9EFBFC0036E81A /* Info.plist */,
+				421D17051D9EFBFC0036E81A /* LaunchScreen.storyboard */,
 				421D17201D9F0AB70036E81A /* hashmarks.png */,
 			);
 			name = Resources;
