@@ -62,22 +62,38 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playcaller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iH5-q4-pbN">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISw-WU-HNe">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.38620320429999999" green="0.38620320429999999" blue="0.38620320429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ob3-jD-17L" firstAttribute="top" secondItem="Kk9-oN-DJx" secondAttribute="bottom" id="7Li-Ub-YmI"/>
                             <constraint firstItem="zOf-Om-Yn9" firstAttribute="leading" secondItem="Kk9-oN-DJx" secondAttribute="leading" constant="16" id="8oU-pP-Lo5"/>
+                            <constraint firstItem="iH5-q4-pbN" firstAttribute="centerX" secondItem="Kk9-oN-DJx" secondAttribute="centerX" id="Anu-N7-FIK"/>
                             <constraint firstItem="Kk9-oN-DJx" firstAttribute="leading" secondItem="HHh-FR-bIo" secondAttribute="leading" id="JcC-5B-4gz"/>
                             <constraint firstAttribute="trailing" secondItem="Kk9-oN-DJx" secondAttribute="trailing" id="MJ4-s0-7NK"/>
                             <constraint firstItem="zOf-Om-Yn9" firstAttribute="bottom" secondItem="Kk9-oN-DJx" secondAttribute="bottom" constant="-50" id="O3G-je-fTa"/>
+                            <constraint firstItem="Kk9-oN-DJx" firstAttribute="top" secondItem="iH5-q4-pbN" secondAttribute="top" constant="-40" id="RDJ-56-4Zt"/>
                             <constraint firstItem="Kk9-oN-DJx" firstAttribute="top" secondItem="HHh-FR-bIo" secondAttribute="top" id="RTz-5D-COJ"/>
+                            <constraint firstItem="ISw-WU-HNe" firstAttribute="top" secondItem="iH5-q4-pbN" secondAttribute="bottom" constant="8" id="XHT-CG-b0t"/>
                             <constraint firstItem="zOf-Om-Yn9" firstAttribute="trailing" secondItem="Kk9-oN-DJx" secondAttribute="trailing" constant="-16" id="eP0-1s-vtL"/>
+                            <constraint firstItem="ISw-WU-HNe" firstAttribute="centerX" secondItem="iH5-q4-pbN" secondAttribute="centerX" id="uUE-AG-dWP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tSG-Kp-FEg"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="Kk9-oN-DJx" id="SM8-Ah-50X"/>
                         <outlet property="buttonStackView" destination="zOf-Om-Yn9" id="zMr-yt-LIl"/>
+                        <outlet property="teamNameLabel" destination="ISw-WU-HNe" id="wu7-cz-QhM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHx-q3-ucv" userLabel="First Responder" sceneMemberID="firstResponder"/>

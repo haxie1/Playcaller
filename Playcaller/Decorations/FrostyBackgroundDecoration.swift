@@ -7,6 +7,37 @@
 //
 
 import UIKit
+
+// Loaded by a Storyboard/Xib to decorate the background of a UIViewController
+class FrostyBackgroundDecoration: NSObject {
+    @IBOutlet weak var targetVC: UIViewController! {
+        didSet {
+            print("---------- set the targetVC on the decoration")
+        }
+    }
+    
+    @IBInspectable var backgroundImage: UIImage?
+    var frostyView: FrostyImageView = FrostyImageView()
+   
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //
+      
+        self.targetVC.view.insertSubview(self.frostyView, at: 0)
+        self.setupFrostyView()
+    }
+
+    private func setupFrostyView() {
+        self.frostyView.translatesAutoresizingMaskIntoConstraints = false
+        self.frostyView.topAnchor.constraint(equalTo: self.targetVC.view.topAnchor).isActive = true
+        self.frostyView.bottomAnchor.constraint(equalTo: self.targetVC.view.bottomAnchor).isActive = true
+        self.frostyView.leadingAnchor.constraint(equalTo: self.targetVC.view.leadingAnchor).isActive = true
+        self.frostyView.trailingAnchor.constraint(equalTo: self.targetVC.view.trailingAnchor).isActive = true
+        self.frostyView.backgroundColor = UIColor.black
+        self.frostyView.imageView.image = self.backgroundImage
+    }
+}
+
 @IBDesignable class FrostyImageView: UIView {
     var imageView: UIImageView = UIImageView()
     
@@ -36,34 +67,5 @@ import UIKit
         self.imageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1).isActive = true
         self.imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 1).isActive = true
         
-    }
-}
-
-class FrostyBackgroundDecoration: NSObject {
-    @IBOutlet weak var targetVC: UIViewController! {
-        didSet {
-            print("---------- set the targetVC on the decoration")
-        }
-    }
-    
-    @IBInspectable var backgroundImage: UIImage?
-    var frostyView: FrostyImageView = FrostyImageView()
-   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        //
-      
-        self.targetVC.view.insertSubview(self.frostyView, at: 0)
-        self.setupFrostyView()
-    }
-
-    private func setupFrostyView() {
-        self.frostyView.translatesAutoresizingMaskIntoConstraints = false
-        self.frostyView.topAnchor.constraint(equalTo: self.targetVC.view.topAnchor).isActive = true
-        self.frostyView.bottomAnchor.constraint(equalTo: self.targetVC.view.bottomAnchor).isActive = true
-        self.frostyView.leadingAnchor.constraint(equalTo: self.targetVC.view.leadingAnchor).isActive = true
-        self.frostyView.trailingAnchor.constraint(equalTo: self.targetVC.view.trailingAnchor).isActive = true
-        self.frostyView.backgroundColor = UIColor.black
-        self.frostyView.imageView.image = self.backgroundImage
     }
 }

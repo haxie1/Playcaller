@@ -174,10 +174,10 @@
 				421D171C1D9EFFA60036E81A /* MainViewController.swift */,
 				421D17001D9EFBFC0036E81A /* Main.storyboard */,
 				421D17031D9EFBFC0036E81A /* Assets.xcassets */,
+				42D8CDF61DA848A30024DA7B /* Resources */,
 				421D17051D9EFBFC0036E81A /* LaunchScreen.storyboard */,
 				421D17081D9EFBFC0036E81A /* Info.plist */,
 				421D171E1D9F05E50036E81A /* UIKit-Extensions.swift */,
-				421D17201D9F0AB70036E81A /* hashmarks.png */,
 				42169DC21DA2C83B00FD9873 /* Coordinator.swift */,
 			);
 			path = Playcaller;
@@ -246,6 +246,14 @@
 				4247CFF71DA5A4D500CECC3E /* Info.plist */,
 			);
 			path = EventsTests;
+			sourceTree = "<group>";
+		};
+		42D8CDF61DA848A30024DA7B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				421D17201D9F0AB70036E81A /* hashmarks.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -779,6 +787,7 @@
 				4247CFFF1DA5A4D500CECC3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4247D0011DA5A4D500CECC3E /* Build configuration list for PBXNativeTarget "EventsTests" */ = {
 			isa = XCConfigurationList;
@@ -787,6 +796,7 @@
 				4247D0031DA5A4D500CECC3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

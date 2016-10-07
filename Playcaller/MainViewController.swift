@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var buttonStackView: UIStackView!
     
+    @IBOutlet weak var teamNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,11 +35,6 @@ class MainViewController: UIViewController {
                 buttonStackView?.spacing = 40
             }
             }, completion: nil)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 // MARK: Actions
