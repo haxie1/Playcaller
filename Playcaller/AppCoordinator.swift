@@ -10,13 +10,21 @@ import Events
 
 enum NavEvent: Event {
     case dismiss
-    case push
-    case pop
+    case show(feature: AppFeature)
     // other events
     
     var eventData: NavEvent {
         return self
     }
+}
+
+// TODO: Decide how to handle routing between features of teh application using nav events.
+
+enum AppFeature: String {
+    case home
+    case settings
+    case playbook
+    case playsheet
 }
 
 class AppCoordinator: Coordinator {
@@ -80,9 +88,8 @@ extension AppCoordinator: EventHandler {
         case .dismiss:
             self.managedController?.dismiss(animated: true, completion: nil)
             break
-        case .pop:
-            break
-        case .push:
+        case .show(let feature):
+            print("coordinator will show \(feature)")
             break
         }
     }

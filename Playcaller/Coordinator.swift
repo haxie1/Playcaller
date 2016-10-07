@@ -26,6 +26,7 @@ protocol Coordinator: class {
     @discardableResult func pop() -> Coordinator?
 }
 
+// Provide basic Push/Pop behavior for coordinator concrete types.
 extension Coordinator {
     
     func push(coordinator: Coordinator) {

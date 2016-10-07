@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Events
 
 class MainViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var buttonStackView: UIStackView!
     
     @IBOutlet weak var teamNameLabel: UILabel!
-    
     @IBOutlet weak var settingsBarButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,14 +43,17 @@ class MainViewController: UIViewController {
     @IBAction func newPlaysheet(_ sender: AnyObject) {
         // push a navigation event to the event distro
         print("--- call a navigation event for a new playsheet")
+        EventDistributer.shared.distribute(event: NavEvent.show(feature: .playsheet))
     }
 
     @IBAction func playbook(_ sender: AnyObject) {
         // push a navigation event to the event distro
         print("--- call a navigation event for the playbook feature")
+        EventDistributer.shared.distribute(event: NavEvent.show(feature: .playbook))
     }
     
     @IBAction func showSettings(_ sender: AnyObject) {
+        EventDistributer.shared.distribute(event: NavEvent.show(feature: .settings))
     }
 
 }
