@@ -82,17 +82,25 @@
                             <constraint firstItem="Kk9-oN-DJx" firstAttribute="leading" secondItem="HHh-FR-bIo" secondAttribute="leading" id="JcC-5B-4gz"/>
                             <constraint firstAttribute="trailing" secondItem="Kk9-oN-DJx" secondAttribute="trailing" id="MJ4-s0-7NK"/>
                             <constraint firstItem="zOf-Om-Yn9" firstAttribute="bottom" secondItem="Kk9-oN-DJx" secondAttribute="bottom" constant="-50" id="O3G-je-fTa"/>
-                            <constraint firstItem="Kk9-oN-DJx" firstAttribute="top" secondItem="iH5-q4-pbN" secondAttribute="top" constant="-40" id="RDJ-56-4Zt"/>
+                            <constraint firstItem="Kk9-oN-DJx" firstAttribute="top" secondItem="iH5-q4-pbN" secondAttribute="top" constant="-64" id="RDJ-56-4Zt"/>
                             <constraint firstItem="Kk9-oN-DJx" firstAttribute="top" secondItem="HHh-FR-bIo" secondAttribute="top" id="RTz-5D-COJ"/>
                             <constraint firstItem="ISw-WU-HNe" firstAttribute="top" secondItem="iH5-q4-pbN" secondAttribute="bottom" constant="8" id="XHT-CG-b0t"/>
                             <constraint firstItem="zOf-Om-Yn9" firstAttribute="trailing" secondItem="Kk9-oN-DJx" secondAttribute="trailing" constant="-16" id="eP0-1s-vtL"/>
                             <constraint firstItem="ISw-WU-HNe" firstAttribute="centerX" secondItem="iH5-q4-pbN" secondAttribute="centerX" id="uUE-AG-dWP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tSG-Kp-FEg"/>
+                    <navigationItem key="navigationItem" id="tSG-Kp-FEg">
+                        <barButtonItem key="rightBarButtonItem" image="Settings" style="plain" id="qnn-Qh-WTz">
+                            <color key="tintColor" red="0.76520583690868749" green="0.84384914340101524" blue="0.74541230305726458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="showSettings:" destination="sK9-g2-yw9" id="ndL-Tt-eL6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgroundImageView" destination="Kk9-oN-DJx" id="SM8-Ah-50X"/>
                         <outlet property="buttonStackView" destination="zOf-Om-Yn9" id="zMr-yt-LIl"/>
+                        <outlet property="settingsBarButton" destination="qnn-Qh-WTz" id="Jao-yH-y94"/>
                         <outlet property="teamNameLabel" destination="ISw-WU-HNe" id="wu7-cz-QhM"/>
                     </connections>
                 </viewController>
@@ -124,5 +132,6 @@
     </scenes>
     <resources>
         <image name="MainBackgroundImage" width="310" height="449"/>
+        <image name="Settings" width="22" height="22"/>
     </resources>
 </document>

@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var teamNameLabel: UILabel!
     
+    @IBOutlet weak var settingsBarButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +49,8 @@ class MainViewController: UIViewController {
         print("--- call a navigation event for the playbook feature")
     }
     
+    @IBAction func showSettings(_ sender: AnyObject) {
+    }
 
 }
 
