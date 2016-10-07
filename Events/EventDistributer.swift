@@ -13,6 +13,8 @@ public protocol Event {
     var eventData: EventData { get }
 }
 
+// TODO: Move away from using an EventHandler type and instead of the EventDistributer register handlers directly. This will allow any type to register a handler and get events without a EventHandler conformance requirement.
+// 
 public protocol EventHandler {
     func handle<T: Event>(event: T)
 }

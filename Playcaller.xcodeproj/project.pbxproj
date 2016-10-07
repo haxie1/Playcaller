@@ -106,6 +106,7 @@
 		4247CFF71DA5A4D500CECC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4247D0041DA5A4FD00CECC3E /* EventDistributer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistributer.swift; sourceTree = "<group>"; };
 		4247D0061DA5A61000CECC3E /* EventDistributerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDistributerTests.swift; sourceTree = "<group>"; };
+		42D8CE1B1DA862470024DA7B /* HandlerRegistry.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HandlerRegistry.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +168,7 @@
 		421D16FB1D9EFBFC0036E81A /* Playcaller */ = {
 			isa = PBXGroup;
 			children = (
+				42D8CE1A1DA862310024DA7B /* Playgrounds */,
 				4247CFDE1DA56FB500CECC3E /* Decorations */,
 				421D17221D9F396F0036E81A /* Features */,
 				421D17261D9F43630036E81A /* AppCoordinator.swift */,
@@ -254,6 +256,14 @@
 				421D17201D9F0AB70036E81A /* hashmarks.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		42D8CE1A1DA862310024DA7B /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				42D8CE1B1DA862470024DA7B /* HandlerRegistry.playground */,
+			);
+			name = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
