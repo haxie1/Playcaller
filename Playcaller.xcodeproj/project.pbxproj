@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421454341DAB08310037896E /* PlaycallerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421454331DAB08310037896E /* PlaycallerModelTests.swift */; };
 		421636221DA00C8300BB3F2C /* TeamProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */; };
 		421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */; };
 		42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42169DC21DA2C83B00FD9873 /* Coordinator.swift */; };
+		421C501E1DA93A9B001B7CDF /* Playcaller.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 421C501C1DA93A9B001B7CDF /* Playcaller.xcdatamodeld */; };
+		421C50211DA93ACC001B7CDF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421C50201DA93ACC001B7CDF /* CoreData.framework */; };
+		421C50231DA96590001B7CDF /* PlaycallerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C50221DA96590001B7CDF /* PlaycallerModel.swift */; };
 		421D16FD1D9EFBFC0036E81A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D16FC1D9EFBFC0036E81A /* AppDelegate.swift */; };
 		421D17021D9EFBFC0036E81A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421D17001D9EFBFC0036E81A /* Main.storyboard */; };
 		421D17041D9EFBFC0036E81A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421D17031D9EFBFC0036E81A /* Assets.xcassets */; };
@@ -78,9 +82,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		421454331DAB08310037896E /* PlaycallerModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaycallerModelTests.swift; sourceTree = "<group>"; };
 		421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileViewController.swift; path = Features/TeamProfileViewController.swift; sourceTree = "<group>"; };
 		421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileCoordinator.swift; path = Features/TeamProfileCoordinator.swift; sourceTree = "<group>"; };
 		42169DC21DA2C83B00FD9873 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		421C501D1DA93A9B001B7CDF /* Playcaller.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Playcaller.xcdatamodel; sourceTree = "<group>"; };
+		421C50201DA93ACC001B7CDF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		421C50221DA96590001B7CDF /* PlaycallerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaycallerModel.swift; path = Model/PlaycallerModel.swift; sourceTree = "<group>"; };
 		421D16F91D9EFBFC0036E81A /* Playcaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playcaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421D16FC1D9EFBFC0036E81A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421D17011D9EFBFC0036E81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421C50211DA93ACC001B7CDF /* CoreData.framework in Frameworks */,
 				4247CFFB1DA5A4D500CECC3E /* Events.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +152,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421C501B1DA93A54001B7CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				421C501C1DA93A9B001B7CDF /* Playcaller.xcdatamodeld */,
+				421C50221DA96590001B7CDF /* PlaycallerModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		421C501F1DA93ACC001B7CDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				421C50201DA93ACC001B7CDF /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		421D16F01D9EFBFC0036E81A = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +177,7 @@
 				4247CFE71DA5A4D400CECC3E /* Events */,
 				4247CFF41DA5A4D500CECC3E /* EventsTests */,
 				421D16FA1D9EFBFC0036E81A /* Products */,
+				421C501F1DA93ACC001B7CDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +198,7 @@
 				42D8CE1A1DA862310024DA7B /* Playgrounds */,
 				4247CFDE1DA56FB500CECC3E /* Decorations */,
 				421D17221D9F396F0036E81A /* Features */,
+				421C501B1DA93A54001B7CDF /* Model */,
 				421D17261D9F43630036E81A /* AppCoordinator.swift */,
 				421D16FC1D9EFBFC0036E81A /* AppDelegate.swift */,
 				421D171C1D9EFFA60036E81A /* MainViewController.swift */,
@@ -189,6 +217,7 @@
 				421D17111D9EFBFC0036E81A /* PlaycallerTests.swift */,
 				421D17131D9EFBFC0036E81A /* Info.plist */,
 				4247CFDC1DA475D400CECC3E /* CoordinatorTests.swift */,
+				421454331DAB08310037896E /* PlaycallerModelTests.swift */,
 			);
 			path = PlaycallerTests;
 			sourceTree = "<group>";
@@ -454,9 +483,11 @@
 			files = (
 				421636221DA00C8300BB3F2C /* TeamProfileViewController.swift in Sources */,
 				421D17271D9F43630036E81A /* AppCoordinator.swift in Sources */,
+				421C50231DA96590001B7CDF /* PlaycallerModel.swift in Sources */,
 				421D16FD1D9EFBFC0036E81A /* AppDelegate.swift in Sources */,
 				421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */,
 				4247CFE01DA56FF100CECC3E /* FrostyBackgroundDecoration.swift in Sources */,
+				421C501E1DA93A9B001B7CDF /* Playcaller.xcdatamodeld in Sources */,
 				421D171D1D9EFFA60036E81A /* MainViewController.swift in Sources */,
 				421D171F1D9F05E50036E81A /* UIKit-Extensions.swift in Sources */,
 				42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */,
@@ -467,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421454341DAB08310037896E /* PlaycallerModelTests.swift in Sources */,
 				4247CFDD1DA475D400CECC3E /* CoordinatorTests.swift in Sources */,
 				421D17121D9EFBFC0036E81A /* PlaycallerTests.swift in Sources */,
 			);
@@ -809,6 +841,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		421C501C1DA93A9B001B7CDF /* Playcaller.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				421C501D1DA93A9B001B7CDF /* Playcaller.xcdatamodel */,
+			);
+			currentVersion = 421C501D1DA93A9B001B7CDF /* Playcaller.xcdatamodel */;
+			name = Playcaller.xcdatamodeld;
+			path = Model/Playcaller.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 421D16F11D9EFBFC0036E81A /* Project object */;
 }

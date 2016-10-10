@@ -32,7 +32,7 @@ class EventDistributerTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_createingASharedInstance() {
+    func test_creatingASharedInstance() {
         let distributer = EventDistributer.shared
         XCTAssert(distributer === EventDistributer.shared)
     }
