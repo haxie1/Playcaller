@@ -78,11 +78,7 @@ class AppCoordinator: Coordinator {
     }
     
     private func hasProfile() -> Bool {
-        guard let profiles: [TeamProfile] = try? self.playbookModel.mainContext.fetch(TeamProfile.fetchRequest()) else {
-            return false
-        }
-        
-        if let profile = profiles.first {
+        if let profile: TeamProfile = self.playbookModel.fetchFirst(TeamProfile.fetchRequest()) {
             return profile.name != nil
         }
         

@@ -63,4 +63,10 @@ class PlaycallerModelTests: XCTestCase {
         XCTAssert(count == 1)
     }
     
+    func test_fetchingAProfile() {
+        let model = PlaycallerModel(type: .inMemory)
+        let _ = TeamProfile(context: model.mainContext)
+        let profile: TeamProfile? = model.fetchFirst(TeamProfile.fetchRequest())
+        XCTAssertNotNil(profile)
+    }
 }

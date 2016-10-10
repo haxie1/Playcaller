@@ -47,5 +47,12 @@ class PlaycallerModel {
         }
     }
     
-    
+    func fetchFirst<T: NSFetchRequestResult>(_ request: NSFetchRequest<T>) -> T? {
+        let context = self.mainContext
+        guard let results: [T] = try? context.fetch(request) else {
+            return nil
+        }
+        
+        return results.first
+    }
 }
