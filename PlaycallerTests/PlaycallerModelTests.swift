@@ -53,6 +53,16 @@ class PlaycallerModelTests: XCTestCase {
         }
     }
     
-    
+    func test_creatingATeamProfile() {
+        let model = PlaycallerModel(type: .inMemory)
+        model.load { XCTAssertNil($0) }
+        
+        let teamProfile = TeamProfile(context: model.persistentContainer.viewContext)
+        teamProfile.name = "My Name"
+        
+        try? model.persistentContainer.viewContext.save()
+        let count = try? model.persistentContainer.viewContext.count(for: TeamProfile.fetchRequest())
+        XCTAssert(count == 1)
+    }
     
 }

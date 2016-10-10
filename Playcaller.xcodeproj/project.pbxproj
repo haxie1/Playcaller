@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		421454341DAB08310037896E /* PlaycallerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421454331DAB08310037896E /* PlaycallerModelTests.swift */; };
+		421454391DAB16330037896E /* TeamProfile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421454371DAB16330037896E /* TeamProfile+CoreDataClass.swift */; };
+		4214543A1DAB16330037896E /* TeamProfile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421454381DAB16330037896E /* TeamProfile+CoreDataProperties.swift */; };
 		421636221DA00C8300BB3F2C /* TeamProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */; };
 		421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */; };
 		42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42169DC21DA2C83B00FD9873 /* Coordinator.swift */; };
@@ -83,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		421454331DAB08310037896E /* PlaycallerModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaycallerModelTests.swift; sourceTree = "<group>"; };
+		421454371DAB16330037896E /* TeamProfile+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TeamProfile+CoreDataClass.swift"; path = "Model/TeamProfile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		421454381DAB16330037896E /* TeamProfile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TeamProfile+CoreDataProperties.swift"; path = "Model/TeamProfile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileViewController.swift; path = Features/TeamProfileViewController.swift; sourceTree = "<group>"; };
 		421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileCoordinator.swift; path = Features/TeamProfileCoordinator.swift; sourceTree = "<group>"; };
 		42169DC21DA2C83B00FD9873 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 		421C501B1DA93A54001B7CDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				421454371DAB16330037896E /* TeamProfile+CoreDataClass.swift */,
+				421454381DAB16330037896E /* TeamProfile+CoreDataProperties.swift */,
 				421C501C1DA93A9B001B7CDF /* Playcaller.xcdatamodeld */,
 				421C50221DA96590001B7CDF /* PlaycallerModel.swift */,
 			);
@@ -483,6 +489,7 @@
 			files = (
 				421636221DA00C8300BB3F2C /* TeamProfileViewController.swift in Sources */,
 				421D17271D9F43630036E81A /* AppCoordinator.swift in Sources */,
+				4214543A1DAB16330037896E /* TeamProfile+CoreDataProperties.swift in Sources */,
 				421C50231DA96590001B7CDF /* PlaycallerModel.swift in Sources */,
 				421D16FD1D9EFBFC0036E81A /* AppDelegate.swift in Sources */,
 				421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */,
@@ -491,6 +498,7 @@
 				421D171D1D9EFFA60036E81A /* MainViewController.swift in Sources */,
 				421D171F1D9F05E50036E81A /* UIKit-Extensions.swift in Sources */,
 				42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */,
+				421454391DAB16330037896E /* TeamProfile+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
