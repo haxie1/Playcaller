@@ -31,6 +31,10 @@ class PlaycallerModel {
     let persistentContainer: NSPersistentContainer
     let type: PlaycallerModelType
     
+    var mainContext: NSManagedObjectContext {
+        return self.persistentContainer.viewContext
+    }
+    
     init(withModelName name: String = "Playcaller", type: PlaycallerModelType = .sql) {
         self.persistentContainer = NSPersistentContainer(name: name)
         self.type = type

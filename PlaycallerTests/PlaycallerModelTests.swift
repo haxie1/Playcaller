@@ -39,18 +39,16 @@ class PlaycallerModelTests: XCTestCase {
     }
     
     func test_loadingPlayerModelUsingInMemoryStore() {
-        let dbLoadExpectation: XCTestExpectation = expectation(description: "Load In Memory DB")
         let model = PlaycallerModel(type: .inMemory)
         
         model.load { (error) in
             XCTAssertNil(error)
-            dbLoadExpectation.fulfill()
         }
-        waitForExpectations(timeout: 1.0) { (error) in
-            if let _ = error {
-                XCTFail("failed waiting for DB to load")
-            }
-        }
+    }
+    
+    func test_mainContext() {
+        let model = PlaycallerModel(type: .inMemory)
+        XCTAssert(model.mainContext == model.persistentContainer.viewContext)
     }
     
     func test_creatingATeamProfile() {

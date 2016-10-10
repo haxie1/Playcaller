@@ -33,14 +33,24 @@ class AppCoordinator: Coordinator {
     
     private (set) weak var managedController: UIViewController?
     private var eventDistributerID: UUID?
+    private var playbookModel: PlaycallerModel
     
     required init(with managedController: UIViewController) {
         self.managedController = managedController
+        self.playbookModel = PlaycallerModel()
+        
         self.eventDistributerID = EventDistributer.shared.register(handler: self)
+        self.playbookModel.load { (error) in
+            if let error = error {
+                fatalError(error.localizedDescription)
+            }
+        }
     }
     
     func start() {
         if !self.hasProfile() {
+            // post this after a delay in order to provide a bit of context to the user.
+            //
            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
                 self.showTeamProfile()
             }
@@ -68,11 +78,15 @@ class AppCoordinator: Coordinator {
     }
     
     private func hasProfile() -> Bool {
-        guard let _ = UserDefaults.standard.string(forKey: "TeamProfileName") else {
+        guard let profiles: [TeamProfile] = try? self.playbookModel.mainContext.fetch(TeamProfile.fetchRequest()) else {
             return false
         }
         
-        return true
+        if let profile = profiles.first {
+            return profile.name != nil
+        }
+        
+        return false
     }
 }
 
