@@ -74,6 +74,12 @@ class AppCoordinator: Coordinator {
     }
     
     func newPlaysheet() {
+        let storyboard = UIStoryboard(name: "Playsheet", bundle: nil)
+        guard let playsheetController = storyboard.instantiateInitialViewController() else {
+            fatalError("Couldn't create the playsheet controller")
+        }
+        
+        self.managedController?.present(playsheetController, animated: true, completion: nil)
         
     }
     
@@ -100,6 +106,23 @@ extension AppCoordinator: EventHandler {
             break
         case .show(let feature):
             print("coordinator will show \(feature)")
+            self.show(feature: feature)
+            break
+        }
+    }
+    
+    func show(feature: AppFeature) {
+        switch feature {
+        case .home:
+            break
+        case .playbook:
+            self.showPlaybook()
+            break
+        case .playsheet:
+            self.newPlaysheet()
+            break
+        case .settings:
+            self.showTeamProfile()
             break
         }
     }

@@ -36,6 +36,25 @@ extension UIView {
             return self.layer.value(forKey: "bordered") as? Bool ?? false
         }
     }
+    
+    @IBInspectable var bottomShadow: Bool {
+        set (shadow) {
+            let layer = self.layer
+            if shadow {
+                layer.shadowColor = UIColor.black.cgColor
+                layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+                layer.shadowRadius = 1.0
+                layer.shadowOpacity = 0.3
+                self.clipsToBounds = false
+            } else {
+                layer.shadowOpacity = 0.0
+                self.clipsToBounds = true
+            }
+        }
+        get {
+            return self.layer.shadowOpacity > 0.0
+        }
+    }
 }
 
 // Expose a switch in Interface Builder to toggle transparent navigation bars.
@@ -52,4 +71,3 @@ extension UINavigationBar {
         }
     }
 }
-

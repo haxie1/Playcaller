@@ -10,9 +10,12 @@
 		421454341DAB08310037896E /* PlaycallerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421454331DAB08310037896E /* PlaycallerModelTests.swift */; };
 		421454391DAB16330037896E /* TeamProfile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421454371DAB16330037896E /* TeamProfile+CoreDataClass.swift */; };
 		4214543A1DAB16330037896E /* TeamProfile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421454381DAB16330037896E /* TeamProfile+CoreDataProperties.swift */; };
+		421471741DC2B3020091AE2E /* Playsheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421471731DC2B3020091AE2E /* Playsheet.storyboard */; };
 		421636221DA00C8300BB3F2C /* TeamProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */; };
 		421636241DA01AB600BB3F2C /* TeamProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */; };
 		42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42169DC21DA2C83B00FD9873 /* Coordinator.swift */; };
+		4217D8741DC3C52400C7E613 /* PlaysheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4217D8731DC3C52400C7E613 /* PlaysheetTableViewCell.swift */; };
+		4217D8761DC3CF8700C7E613 /* PlaysheetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4217D8751DC3CF8700C7E613 /* PlaysheetTableViewController.swift */; };
 		421C501E1DA93A9B001B7CDF /* Playcaller.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 421C501C1DA93A9B001B7CDF /* Playcaller.xcdatamodeld */; };
 		421C50211DA93ACC001B7CDF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421C50201DA93ACC001B7CDF /* CoreData.framework */; };
 		421C50231DA96590001B7CDF /* PlaycallerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C50221DA96590001B7CDF /* PlaycallerModel.swift */; };
@@ -87,9 +90,12 @@
 		421454331DAB08310037896E /* PlaycallerModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaycallerModelTests.swift; sourceTree = "<group>"; };
 		421454371DAB16330037896E /* TeamProfile+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TeamProfile+CoreDataClass.swift"; path = "Model/TeamProfile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		421454381DAB16330037896E /* TeamProfile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TeamProfile+CoreDataProperties.swift"; path = "Model/TeamProfile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		421471731DC2B3020091AE2E /* Playsheet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Playsheet.storyboard; path = Features/Playsheet.storyboard; sourceTree = "<group>"; };
 		421636211DA00C8300BB3F2C /* TeamProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileViewController.swift; path = Features/TeamProfileViewController.swift; sourceTree = "<group>"; };
 		421636231DA01AB600BB3F2C /* TeamProfileCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamProfileCoordinator.swift; path = Features/TeamProfileCoordinator.swift; sourceTree = "<group>"; };
 		42169DC21DA2C83B00FD9873 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4217D8731DC3C52400C7E613 /* PlaysheetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaysheetTableViewCell.swift; path = Features/PlaysheetTableViewCell.swift; sourceTree = "<group>"; };
+		4217D8751DC3CF8700C7E613 /* PlaysheetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaysheetTableViewController.swift; path = Features/PlaysheetTableViewController.swift; sourceTree = "<group>"; };
 		421C501D1DA93A9B001B7CDF /* Playcaller.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Playcaller.xcdatamodel; sourceTree = "<group>"; };
 		421C50201DA93ACC001B7CDF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		421C50221DA96590001B7CDF /* PlaycallerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaycallerModel.swift; path = Model/PlaycallerModel.swift; sourceTree = "<group>"; };
@@ -156,6 +162,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421471721DC2B2E60091AE2E /* Playsheet */ = {
+			isa = PBXGroup;
+			children = (
+				421471731DC2B3020091AE2E /* Playsheet.storyboard */,
+				4217D8751DC3CF8700C7E613 /* PlaysheetTableViewController.swift */,
+				4217D8731DC3C52400C7E613 /* PlaysheetTableViewCell.swift */,
+			);
+			name = Playsheet;
+			sourceTree = "<group>";
+		};
 		421C501B1DA93A54001B7CDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +247,7 @@
 		421D17221D9F396F0036E81A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				421471721DC2B2E60091AE2E /* Playsheet */,
 				421D17281D9F495B0036E81A /* Team Profile */,
 				421D17231D9F397D0036E81A /* Playbook */,
 			);
@@ -454,6 +471,7 @@
 				421D172A1D9F496D0036E81A /* TeamProfile.storyboard in Resources */,
 				421D17251D9F39900036E81A /* Playbook.storyboard in Resources */,
 				421D17041D9EFBFC0036E81A /* Assets.xcassets in Resources */,
+				421471741DC2B3020091AE2E /* Playsheet.storyboard in Resources */,
 				421D17211D9F0AB70036E81A /* hashmarks.png in Resources */,
 				421D17021D9EFBFC0036E81A /* Main.storyboard in Resources */,
 			);
@@ -496,9 +514,11 @@
 				4247CFE01DA56FF100CECC3E /* FrostyBackgroundDecoration.swift in Sources */,
 				421C501E1DA93A9B001B7CDF /* Playcaller.xcdatamodeld in Sources */,
 				421D171D1D9EFFA60036E81A /* MainViewController.swift in Sources */,
+				4217D8741DC3C52400C7E613 /* PlaysheetTableViewCell.swift in Sources */,
 				421D171F1D9F05E50036E81A /* UIKit-Extensions.swift in Sources */,
 				42169DC31DA2C83B00FD9873 /* Coordinator.swift in Sources */,
 				421454391DAB16330037896E /* TeamProfile+CoreDataClass.swift in Sources */,
+				4217D8761DC3CF8700C7E613 /* PlaysheetTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +692,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FKB7656F6P;
 				INFOPLIST_FILE = Playcaller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -686,6 +707,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FKB7656F6P;
 				INFOPLIST_FILE = Playcaller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
